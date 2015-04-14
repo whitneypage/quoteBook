@@ -2,8 +2,6 @@ var app = angular.module('quoteBook');
 
 app.controller('mainCtrl', function($scope, myService) {
 
-  $scope.test = 'This is a test';
-
 
    $scope.getData = function() {
    	  $scope.quotes = myService.getData();
@@ -13,13 +11,17 @@ app.controller('mainCtrl', function($scope, myService) {
 
 
    $scope.addData = function() {
-   	$scope.newQuote = myService.addData();
+   	var newOne = {
+   		text: $scope.text,
+   		author: $scope.author
+	}
+   	$scope.newQuote = myService.addData(newOne);
    }
 
   $scope.addData();
 
    $scope.removeData = function() {
-   	 $scope.deleted = myService.removeData();
+   	 $scope.deleted = myService.removeData($scope.text);
    }
 
    $scope.removeData();

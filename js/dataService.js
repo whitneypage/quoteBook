@@ -21,7 +21,7 @@ app.service('myService', function() {
   	if(obj.text && obj.author) {
   		quotes.push(obj);
   	}
-   }
+  }
 
 
   this.removeData = function(text) {
