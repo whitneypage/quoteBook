@@ -32,8 +32,7 @@ app.service('myService', function() {
   	}
   }
 
-
-
+ 
 
 
 });

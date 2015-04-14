@@ -26,6 +26,10 @@ app.controller('mainCtrl', function($scope, myService) {
 
    $scope.removeData();
 
+   $scope.remove = function(quote) {
+     myService.removeData(quote.text);
+   }
+
 
   
 
