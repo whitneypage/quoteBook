@@ -2,3 +2,24 @@ body {
 	background-image: url(concrete_seamless.png); 
 }
 
+.input {
+	text-align: center;
+	height: 30px;
+	display: inline-block;
+
+}
+
+.input-search {
+	text-align: center;
+	height: 30px;
+	float: right;
+}
+
+
+.trash {
+	border-radius: 50%;
+	width: 35px;
+	height: 35px;
+	font-size: 20px;
+}
+ 

@@ -9,22 +9,21 @@
 
 <input class="input" placeholder= "Text" ng-model="text">
 <input class="input" placeholder= "Author" ng-model="author">
-</br>
-</br>
-<button class="add" ng-click="addData()">Add Quote</button>
+
+<button class="add" ng-click="addData()" ng-show="showMe">Add Quote</button>
 <!--<button class="remove" ng-click="removeData()">Remove Quote</button>-->
-</br>
-</br>
-<input class="input" placeholder= "Search" ng-model="search">
+
+<input class="input-search" placeholder= "Search" ng-model="search">
 </br>
 </br>
 
 
-<div ng-repeat="quote in quotes | filter: search">
-	<h4>{{quote.text}}</h4>
-	<h5>{{quote.author}}</h5>
-	<button ng-click="remove(quote)"><i class="fa fa-trash-o"></i></button>
-</div>
+    <div ng-repeat="quote in quotes | filter: search">
+		<h4>{{quote.text}}</h4>
+		<h5>{{quote.author}}</h5>
+		<button class="trash" ng-click="remove(quote)"><i class="fa fa-trash-o"></i></button>
+    </div>
+
 
 
 
